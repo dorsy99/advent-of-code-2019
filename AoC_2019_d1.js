@@ -36,3 +36,9 @@ var total2 = 0;
 for (var i = 0; i < inputs.length; i++) {
     total2 += doIt2(inputs[i]);
 }
+
+// Lessons Learned:
+// - Read the question properly. 
+// - The recursed total of fuel is not the same as the 
+// total of all fuel recursed, but I don't 100% understand why. 
+// It's probably to do with rounding.

@@ -59,6 +59,8 @@ for (var j = 0; j < 100; j++) {
     }
 }
 
+
+// Old working out: 
 /*
 console.log(intCode(puzzleOutput));
 
@@ -93,3 +95,12 @@ for (var i = 0; i < puzzleInput.length; i = i + 5) {
     }
 }
 */
+
+
+// Lessons Learned:
+// - What the Eff an Intcode program is. 
+// - That sometimes a solution that seems too simple still works
+// - In Javascript if you set an Array to a variable, and another variable 
+// to equal the first variable, any changes to the second variable change the
+// first array. 
+// - That I should probably comment my code more, but oh well. ;)
