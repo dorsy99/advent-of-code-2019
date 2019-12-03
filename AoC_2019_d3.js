@@ -73,24 +73,27 @@ function getCoord(input) {
 }
 
 out1.forEach(function(item) {
-            out2.forEach(function(item2) {
-                    //console.log("ITEM: " + item + " ITEM2: " + item2);
-                    if (getCoord(item) == getCoord(item2)) {
-                        //console.log("intersection: " + item2 + " in " + parseInt(item1.substr(item1.length - 1, item1.length) + parseInt(item2.substr(item2.length - 1, item2.length))));
-                        ////Math.abs(parseInt(item2.split(",")[0])) + Math.abs(parseInt(item2.split(",")[1]))
-                        intersection.push(
+    out2.forEach(function(item2) {
+        //console.log("ITEM: " + item + " ITEM2: " + item2);
+        if (getCoord(item) == getCoord(item2)) {
+            //console.log("intersection: " + item2 + " in " + parseInt(item1.substr(item1.length - 1, item1.length) + parseInt(item2.substr(item2.length - 1, item2.length))));
+            ////Math.abs(parseInt(item2.split(",")[0])) + Math.abs(parseInt(item2.split(",")[1]))
+            intersection.push(
+                /*
                             [Math.abs(parseInt(item2.split(",")[0])) +
-                                Math.abs(parseInt(item2.split(",")[1])),
-                                parseInt(item.split(",")[2]) +
-                                parseInt(item2.split(",")[2]]);
-                        }
-                    })
-            })
+                             Math.abs(parseInt(item2.split(",")[1])),
+                             parseInt(item.split(",")[2]) +
+                             parseInt(item2.split(",")[2]]));
+                        */
+            );
+        }
+    })
+})
 
 
 
 
-        //wowza. Brute force!
+//wowza. Brute force!
 
-        console.log(intersection);
-        //93,-1
+console.log(intersection);
+//93,-1
