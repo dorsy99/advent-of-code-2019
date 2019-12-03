@@ -4,6 +4,9 @@ var input2 = 'L1009,D700,L634,U294,R898,D947,R650,U988,L623,D968,R761,U490,R525,
 var test1 = 'R75,D30,R83,U83,L12,D49,R71,U7,L72';
 var test2 = 'U62,R66,U55,R34,D71,R55,D58,R83';
 
+var test21 = 'R98,U47,R26,D63,R33,U87,L62,D20,R33,U53,R51';
+var test22 = 'U98,R91,D20,R16,D67,R40,U7,R15,U6,R7';
+
 function runSteps(input) {
     var stepArray = input.split(",");
     var x = 0;
@@ -18,6 +21,7 @@ function runSteps(input) {
                 x++;
                 steps++;
                 outArray.push([x,y,steps]);
+                //outArray.push(x.toString() + "," + y.toString());
             }
 
         }
@@ -27,6 +31,7 @@ function runSteps(input) {
                 x = x - 1;
                 steps++;
                 outArray.push([x,y,steps]);
+                //outArray.push(x.toString() + "," + y.toString());
             }
         }
         if (step[0] == "U") {
@@ -35,6 +40,7 @@ function runSteps(input) {
                 y++;
                 steps++;
                 outArray.push([x,y,steps]);
+                //outArray.push(x.toString() + "," + y.toString());
             }
         }
         if (step[0] == "D") {
@@ -43,6 +49,7 @@ function runSteps(input) {
                 y = y - 1;
                 steps++;
                 outArray.push([x,y,steps]);
+                //outArray.push(x.toString() + "," + y.toString());
             }
         }
     })
@@ -54,10 +61,24 @@ function runSteps(input) {
 var ans1 = runSteps(input1);
 var ans2 = runSteps(input2);
 
-//console.log(ans1);
+//console.log(ans1.indexOf("4,0"));
+//console.log(ans1[3]);
+//console.log(ans2[3]);
+//console.log(ans2);
 //console.log(ans1.length);
 //console.log(ans2.length);
+function findCoords2(in1, in2) {
+    var found = [];
+    for (var i = 0; i < in1.lenth; i++) {
+        if (in2.indexOf(in1[i]) != -1) {
+            console.log("found one: " + in1[i]);
+            found.push([in1[i],in2[in2.indexOf(in1[i])]]);
+        }
+    }
+    return found;
+}
 
+//console.log(findCoords2(ans1, ans2));
 
 function findCoords(in1, in2) {
     var coordStepCounts = [];
@@ -73,6 +94,7 @@ function findCoords(in1, in2) {
 }
 
 var stepOut = findCoords(ans1, ans2);
+
 //console.log(stepOut.toString());
 //console.log(coordStepCounts);
 
