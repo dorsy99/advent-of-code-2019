@@ -43,7 +43,7 @@ for (var j = 0; j < 100; j++) {
         for (i = 0; i < puzzleInput.length; i++) {
             puzzleOutput[i] = puzzleInput[i];
         }
-        //puzzleOutput = puzzleInput;
+        //puzzleOutput = puzzleInput.toString().split(",");
         puzzleOutput[1] = j;
         puzzleOutput[2] = k;
         //console.log("DOING INPUT WITH:" + puzzleOutput[1] + " & " + puzzleOutput[2]);
@@ -51,14 +51,16 @@ for (var j = 0; j < 100; j++) {
         //console.log(puzzleOutput);
         //console.log(intCode(puzzleOutput));
         //puzzleOutput = puzzleInput;
-        console.log(x);
+        //console.log(x);
         if (x[0] == 19690720) {
-            console.log("FOUND IT: " + j + "  " + k);
+            console.log("FOUND IT: " + j + " " + k);
             break;
         }
     }
+    if (x[0] == 19690720) {
+        break;
+    }
 }
-
 
 // Old working out: 
 /*
