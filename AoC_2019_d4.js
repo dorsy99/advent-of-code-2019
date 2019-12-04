@@ -42,14 +42,62 @@ console.log(onlyIncreases("12344"));
 console.log();
 */
 var answer = 0;
+var listOfAnswers = [];
 range.forEach(function(item) {
     if (onlyIncreases(item) && hasConsecutiveNums(item)) {
         answer++;
+        listOfAnswers.push(item);
     }
 })
 
-console.log("ANSWER IS: " + answer);
-console.log(range);
+console.log(listOfAnswers.toString());
+
+
+/* WRONG WRONG WRONG WRONG
+WRONG WRONG WRONG WRONG
+WRONG
+WRONG
+LOL
+function twoOrFour(input) {
+    var out = false;
+
+    if (!!(input.toString().match(/(?:^|[^0])((?:0{2})+)(?!0)/))) {
+        out = true;
+    }
+    if (!!(input.toString().match(/(?:^|[^1])((?:1{2})+)(?!1)/))) {
+        out = true;
+    }
+    if (!!(input.toString().match(/(?:^|[^2])((?:2{2})+)(?!2)/))) {
+        out = true;
+    }
+    if (!!(input.toString().match(/(?:^|[^3])((?:3{2})+)(?!3)/))) {
+        out = true;
+    }
+    if (!!(input.toString().match(/(?:^|[^4])((?:4{2})+)(?!4)/))) {
+        out = true;
+    }
+    if (!!(input.toString().match(/(?:^|[^5])((?:5{2})+)(?!5)/))) {
+        out = true;
+    }
+    if (!!(input.toString().match(/(?:^|[^6])((?:6{2})+)(?!6)/))) {
+        out = true;
+    }
+    if (!!(input.toString().match(/(?:^|[^7])((?:7{2})+)(?!7)/))) {
+        out = true;
+    }
+    if (!!(input.toString().match(/(?:^|[^8])((?:8{2})+)(?!8)/))) {
+        out = true;
+    }
+    if (!!(input.toString().match(/(?:^|[^9])((?:9{2})+)(?!9)/))) {
+        out = true;
+    }
+    return out;
+}
+*/
+//console.log("ANSWER IS: " + answer);
+//console.log(range);
+
+
 
 /* 
 var arr = ['a', 'b', 'a', 'c', 'a', 'd'];
