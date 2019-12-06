@@ -89,7 +89,7 @@ function intCode(input) {
         }
 
         //MULTIPLICATION 
-        if (curParam.substr(3, 4) == "02") {
+        else if (curParam.substr(3, 4) == "02") {
             console.log("multiplication");
             /*output[output[i + 3]] = output[output[i + 1]] * output[output[i + 2]];
 
@@ -121,25 +121,28 @@ function intCode(input) {
         }
 
         //(USER) Input
-        if (curParam.substr(3, 4) === "03") {
+        else if (curParam.substr(3, 4) === "03") {
             //output = output.replaceAt(output[nextInstruction + 1], codeInput);
             output[nextInstruction + 1] = codeInput;
             nextInstruction = nextInstruction + 2;
         }
 
         //OUTPUT
-        if (curParam.substr(3, 4) === "04") {
+        else if (curParam.substr(3, 4) === "04") {
             console.log(output[nextInstruction + 1]);
             nextInstruction = nextInstruction + 2;
         }
 
         //END
-        if (curParam.substr(3, 4) === "99") {
+        else if (curParam.substr(3, 4) === "99") {
 
             console.log("Finished!");
             break;
             //return output;
             //console.log(output.toString());
+        } else {
+            console.log("Something went wrong!\n" + "Next Instruction: " + nextInstruction + "\nCurrent Param: " + curParam);
+            break
         }
 
 
@@ -152,3 +155,5 @@ function intCode(input) {
 //intCode("1002,4,3,4,33");
 intCode(input);
 //intCode("4,50,99");
+
+//console.log(intCode('1101,100,-1,4,0,99'));
